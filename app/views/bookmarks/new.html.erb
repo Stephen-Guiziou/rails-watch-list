@@ -1,0 +1,20 @@
+
+<div class="container">
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">JCViDeo</p>
+      <h1>Add a movie</h1>
+      <p class="subtitle">Choose a movie for <%= @list.name %></p>
+    </div>
+  </header>
+
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie %>
+    <%= f.input :comment %>
+    <%= f.submit "Add to my list", class: "btn-primary" %>
+  <% end %>
+
+  <p>
+    <%= link_to "← Back to #{@list.name}", list_path(@list) %>
+  </p>
+</div>

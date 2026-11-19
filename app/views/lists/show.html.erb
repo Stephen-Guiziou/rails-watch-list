@@ -1,0 +1,28 @@
+
+<div class="container">
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">JCViDeo</p>
+      <h1><%= @list.name %></h1>
+      <p class="subtitle">Your movie collection</p>
+    </div>
+
+    <%= link_to "+ Add a movie",
+        new_list_bookmark_path(@list),
+        class: "btn-primary" %>
+  </header>
+
+  <%= link_to " Back to my lists", lists_path %>
+
+  <ul>
+    <% @list.bookmarks.each do |bookmark| %>
+      <li>
+        <%= bookmark.movie.title %> - <%= bookmark.comment %>
+
+        <%= link_to "Delete",
+            bookmark_path(bookmark),
+            data: { turbo_method: :delete } %>
+      </li>
+    <% end %>
+  </ul>
+</div>

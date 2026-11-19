@@ -1,0 +1,21 @@
+
+<div class="container">
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">JCViDeo</p>
+      <h1>Create a new list</h1>
+      <p class="subtitle">Give your collection a name!</p>
+    </div>
+  </header>
+
+  <%= form_with model: @list do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.submit "Create my list", class: "btn-primary" %>
+  <% end %>
+
+  <p>
+    <%= link_to "← Back to my lists", lists_path %>
+  </p>
+</div>

@@ -1,0 +1,138 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Montserrat:wght@400;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, #64246e 0%, transparent 55%),
+    linear-gradient(160deg, #241039, #100b20 75%);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 70rem;
+  margin: auto;
+  padding: 4,5rem 2rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1,5rem;
+  margin-bottom: 3,5rem;
+}
+
+.eyebrow {
+  color: #48e9e1;
+  font-weight: 800;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+
+h1, h2 {
+  font-family: 'Righteous', cursive;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 54px;
+  text-shadow: 3px 3px 0 #ff55b8;
+}
+
+h1 span {
+  color: #48e9e1;
+}
+
+.subtitle {
+  color: #e5b9fa;
+}
+
+.btn-primary {
+  background: #ff55b8;
+  color: #241039;
+  padding: 1.5rem 1.5rem;
+  border: 2px solid #ffb8e1;
+  border-radius: 30px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 0 1rem #ff55b8;
+  transition: 0.25s;
+}
+
+.btn-primary:hover {
+  background: #48e9e1;
+  box-shadow: 0 0 2rem #48e9e1;
+  transform: rotate(-2deg) scale(1.05);
+}
+
+.lists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1,5rem;
+}
+
+.list-card {
+  display: block;
+  background: linear-gradient(145deg, #49205d, #241039);
+  border: 2px solid #9a53d9;
+  border-radius: 18px;
+  padding: 2rem;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 8px 0 #13091f;
+  transition: 0.25s;
+}
+
+.list-card:hover {
+  transform: translateY(-8px) rotate(1deg);
+  border-color: #48e9e1;
+  box-shadow: 0 0 20px #48e9e1;
+}
+
+.list-icon {
+  font-size: 42px;
+}
+
+.list-card h2 {
+  color: #ff80c9;
+  font-size: 23px;
+}
+
+.list-card p {
+  color: #e5b9fa;
+  font-size: 15px
+}
+
+.card-arrow {
+  display: inline-block;
+  margin-top: 1,5rem;
+  color: #48e9e1;
+  font-weight: 800;
+}
+
+@media (max-width: 40rem) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+}

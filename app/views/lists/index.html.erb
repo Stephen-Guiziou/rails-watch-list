@@ -1,0 +1,21 @@
+<div class="container">
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">JCViDeo</p>
+      <h1>My <span>Watch Lists</span></h1>
+      <p class="subtitle">All JC favorite movies</p>
+    </div>
+    <%= link_to "+ Create a list", new_list_path, class: "btn-primary" %>
+  </header>
+
+<div class="lists-grid">
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list), class: "list-card" do %>
+        <div class="list-icon">🎬</div>
+        <h2><%= list.name %></h2>
+        <p>Discover JC's collection</p>
+        <span class="card-arrow">Exploware</span>
+      <% end %>
+    <% end  %>
+  </div>
+</div>
